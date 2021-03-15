@@ -1,0 +1,179 @@
+@import "/src/styles/variables/common";
+@import "/src/styles/mixins/breakpoints";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  padding: 17.5px 0 15px;
+  border-bottom: 1px solid #38313b;
+  box-sizing: border-box;
+  z-index: 999;
+
+  transition: all 0.15s ease-in;
+
+  @include breakpoint("sm-max") {
+    padding: 12.3pt 0 11px;
+  }
+}
+
+.containerScrolled {
+  background: $bg-dark;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.logoLink {
+  margin: 0;
+  padding: 0;
+  height: 23px;
+  width: 137.5px;
+
+  @include breakpoint("sm-max") {
+    width: 137px;
+    height: 22.7px;
+  }
+}
+
+.nav {
+  margin: 0 20px;
+}
+
+.menuWrapper {
+  @include breakpoint("sm-max") {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    width: 100%;
+    box-sizing: border-box;
+    top: calc(100% + 1px);
+    left: 0;
+    padding: 0 20px;
+
+    transition: all 0.15s ease-in;
+
+    .containerOpen & {
+      visibility: visible;
+      opacity: 1;
+      max-height: 500px;
+    }
+  }
+}
+
+.menu {
+  list-style: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+
+  @include breakpoint("sm-max") {
+    display: block;
+  }
+}
+
+.menuItem {
+  margin: 0;
+  padding: 0;
+
+  &:not(:first-child) {
+    margin-left: 31px;
+  }
+
+  @include breakpoint("sm-max") {
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &:not(:last-child) {
+      .menuLink {
+        border-bottom: 1px solid rgb(246,246,248);
+      }
+    }
+  }
+}
+
+.menuLink {
+  font-family: $font-primary;
+  font-size: 15.3px;
+  font-weight: 500;
+  letter-spacing: 0.08px;
+  text-decoration: none;
+
+  transition: $transition-hover-color;
+
+  @include breakpoint("md-min") {
+    .menuItemActive & {
+    }
+  }
+
+  @include breakpoint("sm-max") {
+    display: inline-block;
+    padding: 21.3pt 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 12.3px;
+  }
+
+  &:link {
+    text-decoration: none;
+
+    @include breakpoint("md-min") {
+      .menuItemActive & {
+      }
+    }
+
+    @include breakpoint("sm-max") {
+    }
+  }
+
+  &:visited {
+
+    @include breakpoint("md-min") {
+      .menuItemActive & {
+      }
+    }
+
+    @include breakpoint("sm-max") {
+    }
+  }
+
+  &:hover {
+
+    @include breakpoint("sm-max") {
+    }
+  }
+
+  &:active {
+    color: $color-medium;
+
+    @include breakpoint("sm-max") {
+    }
+  }
+}
+
+.menuLinkActive{
+}
+
+.button {
+  @include breakpoint("sm-max") {
+    display: none;
+  }
+}

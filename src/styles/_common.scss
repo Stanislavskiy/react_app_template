@@ -1,0 +1,24 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+input[type=text], textarea, button {
+  outline: none;
+}
+
+input[type=text]:focus, textarea:focus, button:focus, a:focus {
+  outline: none;
+}

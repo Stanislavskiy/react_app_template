@@ -1,0 +1,74 @@
+@import "/src/styles/variables/common";
+@import "/src/styles/mixins/breakpoints";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  box-sizing:border-box;
+  appearance: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  font-family: $font-primary;
+  line-height: 100%;
+  font-weight: 500;
+
+  transition: $transition-hover-opacity;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+// sizes
+
+.buttonPrimary {
+}
+
+.buttonMedium {
+}
+
+.buttonSmall {
+}
+
+// styles
+
+.buttonDark {
+}
+
+.buttonLight {
+}
+
+.buttonGreen {
+}
+
+// MISC
+
+.buttonOutline {
+}
+
+.icon {
+  display: inline-block;
+  line-height: 0;
+  width: 12px;
+  height: 12px;
+  margin-left: 7px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  svg, path {
+    fill: currentColor;
+    border: currentColor;
+  }
+}
+
+.iconAlignLeft {
+  margin-left: 0;
+  margin-right: 7px;
+}
